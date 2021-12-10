@@ -1,0 +1,24 @@
+<dx-data-grid id="gridContainer" [dataSource]="dataSource" [showBorders]="true">
+    <dxo-editing mode="cell" [refreshMode]="'reshape'" [allowAdding]="true" [allowUpdating]="true"
+        [allowDeleting]="true">
+    </dxo-editing>
+    <dxi-column dataField="FirstName" caption="Nombre" dataType="string">
+        <dxi-validation-rule type="required" message="El nombre es obligatorio"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column dataField="LastName" caption="Apellido" dataType="string">
+        <dxi-validation-rule type="required" message="El apellido es obligatorio"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column dataField="Age" caption="Edad" dataType="number">
+        <dxi-validation-rule type="required" message="La edad es obligatoria"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column dataField="Identification" caption="Identificación" dataType="string">
+        <dxi-validation-rule type="required" message="La identificacion es obligatoria"></dxi-validation-rule>
+    </dxi-column>
+    <dxi-column dataField="Email" caption="Correo" dataType="string">
+        <dxi-validation-rule type="required" message="El correo es obligatorio"></dxi-validation-rule>
+        <dxi-validation-rule type="email" message="Debe er un correo valido"></dxi-validation-rule>
+    </dxi-column>
+</dx-data-grid>
+
+<dx-toast [(visible)]="toastOpen" [type]="toastType" [message]="toastMessage">
+</dx-toast>

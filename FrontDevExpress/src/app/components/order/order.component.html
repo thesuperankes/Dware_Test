@@ -1,0 +1,12 @@
+<dx-data-grid id="gridContainer" [dataSource]="dataSource" [showBorders]="true">
+    <dxo-editing mode="cell" [refreshMode]="'reshape'"
+        [allowDeleting]="true">
+    </dxo-editing>
+    <dxi-column dataField="ClientName" caption="Cliente" dataType="string">
+    </dxi-column>
+    <dxi-column dataField="Total" caption="Total" dataType="string">
+    </dxi-column>
+</dx-data-grid>
+
+<dx-toast [(visible)]="toastOpen" [type]="'success'" [message]="'registro eliminado'">
+</dx-toast>
